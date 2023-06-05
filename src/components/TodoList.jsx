@@ -4,7 +4,12 @@ const TodoList = ({ todosProps, setTodos, delTodo }) => {
     return(
         <ul>
             {todosProps.map((todo) => (
-                <TodoItems key={todo.id} itemProp={todo} setTodos={setTodos} delTodo={delTodo}/>
+                <TodoItems 
+                    key={todo.id} 
+                    itemProp={todo} 
+                    setTodos={setTodos} 
+                    delTodo={delTodo}
+                />
             ))}
         </ul>
     )
@@ -15,4 +20,5 @@ TodoList.propTypes = {
     todosProps: PropTypes.array,
     setTodos: PropTypes.func,
     delTodo: PropTypes.func,
+    addTodoItem: PropTypes.func,
 }
