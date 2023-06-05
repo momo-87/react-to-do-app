@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import TodoItems from "@/components/TodoItem";
-const TodoList = ({ todosProps, setTodos, delTodo }) => {
+const TodoList = ({ todosProps, setTodos, delTodo, setUpdate }) => {
     return(
         <ul>
             {todosProps.map((todo) => (
@@ -9,6 +9,7 @@ const TodoList = ({ todosProps, setTodos, delTodo }) => {
                     itemProp={todo} 
                     setTodos={setTodos} 
                     delTodo={delTodo}
+                    setUpdate={setUpdate}
                 />
             ))}
         </ul>
@@ -21,4 +22,5 @@ TodoList.propTypes = {
     setTodos: PropTypes.func,
     delTodo: PropTypes.func,
     addTodoItem: PropTypes.func,
+    setUpdate: PropTypes.func,
 }
