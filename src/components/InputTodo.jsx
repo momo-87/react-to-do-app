@@ -2,19 +2,26 @@ import { useState } from "react";
 import PropTypes from 'prop-types';
 
 const InputTodo = ({ addTodoItem }) => {
-const [title, setTitle] = useState('');
+  const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
 
-const handleChange = (e) => {
-  setTitle(e.target.value);
-};
+  const handleChange = (e) => {
+    setTitle(e.target.value);
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  addTodoItem(title);
-  setTitle('');
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(title.trim()) {
+      addTodoItem(title);
+      setTitle('');
+      setMessage('')
+    } else {
+      setMessage('Please add Item')
+    }
 
-    return (
+  }
+  return (
+    <>
       <form onSubmit={handleSubmit}>
         <input type="text" 
           placeholder="Add Todo..." 
@@ -22,11 +29,13 @@ const handleSubmit = (e) => {
           value={title} 
         />
         <button>Submit</button>
-    </form>
-    );
-  };
-  export default InputTodo;
-  
-  InputTodo.propTypes = {
-    addTodoItem: PropTypes.func,
-  }
+      </form>
+      <span>{message}</span>
+    </>
+  );
+};
+export default InputTodo;
+
+InputTodo.propTypes = {
+  addTodoItem: PropTypes.func,
+}
