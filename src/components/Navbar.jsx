@@ -10,6 +10,11 @@ const Navbar = () => {
             }
         };
         document.addEventListener('mousedown', handle);
+        
+        return () => {
+            // Cleanup the event listener
+            document.removeEventListener('mousedown', handle);
+        };
     }, [dropdown]);
 
     return(
