@@ -1,37 +1,37 @@
 .nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
-   padding-top: 20px;
-   padding-right: 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 20px;
+  padding-right: 5%;
 }
 
 .navList {
-    display: flex;
-    list-style: none;
-    gap: 5%;
-    justify-content: end;
+  display: flex;
+  list-style: none;
+  gap: 5%;
+  justify-content: end;
 }
 
 .navList a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .navButton {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .buttonItem {
-    width: 35%;
+  width: 35%;
 }
 
 .navButtonList {
-    list-style: none;
-    border: 1px solid #f0efef;
-    padding-left: 5%;
-    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
-    margin-left: -15%;
+  list-style: none;
+  border: 1px solid #f0efef;
+  padding-left: 5%;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  margin-left: -15%;
 }
