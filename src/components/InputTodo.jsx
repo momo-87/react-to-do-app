@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import { MdAddCircle } from "react-icons/md";
 
 const InputTodo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
@@ -29,7 +30,9 @@ const InputTodo = ({ addTodoItem }) => {
           value={title} 
           className="input-text"
         />
-        <button className="input-submit" >Submit</button>
+        <button className="input-submit" >
+          <MdAddCircle />
+        </button>
       </form>
       <span className="submit-warning" >{message}</span>
     </>

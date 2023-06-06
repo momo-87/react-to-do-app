@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 usefulCommands.txt
+linters.txt
+react.txt
+webpack.txt

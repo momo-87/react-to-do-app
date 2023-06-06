@@ -53,6 +53,10 @@ body {
   margin-right: 10px;
 }
 
+.input-submit svg {
+  font-size: 25px;
+}
+
 .input-text,
 .input-submit {
   height: 45px;

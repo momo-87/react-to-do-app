@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import styles from "@/styles/TodoItem.module.css";
 import { useState } from 'react';
+import { FaRegTrashAlt } from "react-icons/fa";
+import { AiOutlineEdit } from "react-icons/ai";
 
 const TodoItem = ({ itemProp, setTodos, delTodo, setUpdate }) => {
   const completedStyle = {
@@ -46,9 +48,11 @@ const TodoItem = ({ itemProp, setTodos, delTodo, setUpdate }) => {
             checked={itemProp.completed}
             onChange={() => handleChange(itemProp.id)}
           />
-          <button onClick={handleEditing}>Edit</button>
+          <button onClick={handleEditing}>
+            <AiOutlineEdit />
+          </button>
           <button onClick={() => delTodo(itemProp.id)}>
-            Delete
+            <FaRegTrashAlt />
           </button>
           <span style={itemProp.completed ? completedStyle : null}>
             {itemProp.title}
