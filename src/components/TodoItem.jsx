@@ -15,7 +15,7 @@ const TodoItem = ({ itemProp, setTodos, delTodo, setUpdate }) => {
   let viewMode = {};
   let editMode = {};
   if(editing) {
-    viewMode.display ='none';
+    viewMode.display = 'none';
   } else {
     editMode.display = 'none';
   }
