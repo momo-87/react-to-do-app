@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     left: 0;
-   padding-top: 10px;
+   padding-top: 20px;
    padding-right: 5%;
 }
 
@@ -12,6 +12,11 @@
     list-style: none;
     gap: 5%;
     justify-content: end;
+}
+
+.navList a {
+    text-decoration: none;
+    color: black;
 }
 
 .navButton {

@@ -1,6 +1,13 @@
 import styles from "@/styles/Navbar.module.css";
 import { useEffect, useRef, useState } from "react";
 const Navbar = () => {
+    const links = [
+        { path: '/', text: 'Home' },
+        { path: 'about', text: 'About' },
+        { path: 'profile', text: 'Profile' },
+        { path: 'login', text: 'Login' },
+      ];
+
     const [dropdown, setDropdown] = useState(false);
     const ref = useRef();
     useEffect(() => {
@@ -20,8 +27,13 @@ const Navbar = () => {
     return(
         <nav className={styles.nav}>
             <ul className={styles.navList}>
-                <li>Home</li>
-                <li>About</li>
+                {links.map((link) => {
+                    return(
+                        <li key={link.text}>
+                            <a href={link.path}>{link.text}</a>
+                        </li>
+                    );
+                })}
                 <li className={styles.buttonItem} ref={ref}>
                     <button className={styles.navButton} onClick={() => (setDropdown(!dropdown))}>Services<span>&#8595;</span></button>
                     {dropdown && (
