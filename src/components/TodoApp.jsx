@@ -1,24 +1,20 @@
-import Header from "@/components/Header";
-import TodoLogic from "@/components/TodoLogic";
-import Navbar from "@/components/Navbar";
+import { Routes, Route } from 'react-router-dom';
 
-import '@/styles/app.css';
-import { useEffect } from "react";
+import Home from '@/routes/Home';
+import About from '@/routes/About';
+import Login from '@/routes/Login';
+import Profile from '@/routes/Profile';
+import NotMatch from '@/routes/NotMatch';
 
 const TodoApp = () => {
-
-  useEffect(() => {
-    document.title = 'Todo Tutorial';
-  }, [])
-    return (
-      <div className="wrapper">
-        <div className="todos">
-          <Navbar />
-          <Header />
-          <TodoLogic />
-        </div>
-      </div>
-
-    );
-  };
-  export default TodoApp;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="login" element={<Login />} />
+      <Route path="profile" element={<Profile />} />
+      <Route path="*" element={<NotMatch />} />
+    </Routes>
+  );
+};
+export default TodoApp;
